@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <style>
+        body {font: 12pt Arial; background-color: rgb(0, 0, 0); color:#fff;}
+        button {padding: 30px;}
+    </style>
+</head>
+<body>
+
+    <h1>Conversor de medidas</h1>
+
+    <button onclick="buttonOne()">Converter</button>
+
+    <section id="result">
+        <p>Clique no botão para iniciar</p>
+    </section>
+    
+    <script>
+        function buttonOne() {
+            let name = window.prompt('Digite uma distância em metros: ');
+            // let valor = window.prompt(`Qual o valor do(a) ${name}? `);
+            // let cliente = window.prompt(`Qual o valor você deu para pagar? `);
+            let res = document.getElementById('result');
+            let KM = name/1000;
+            let cm = name*100;
+            res.innerHTML = `<p><strong>A distância corresponde a: </strong></p>
+            <p>${KM} km!</p>
+            <p>${cm} centímetros!</p>`
+        }
+    </script>
+</body>
+</html>
